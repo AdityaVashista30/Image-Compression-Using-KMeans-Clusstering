@@ -11,28 +11,7 @@ from sklearn.cluster import KMeans
 
 plt.rcParams['figure.figsize'] = (20, 12)
 
-# ### Task 2: Data Preprocessing 
-img=io.imread('images/1-Saint-Basils-Cathedral.jpg')
-ax=plt.axes(xticks=[],yticks=[])
-ax.imshow(img);
-
-img.shape
-img_data=(img/255.0).reshape(-1,3)
-img_data.shape
-
-# ### Task 3: Visualizing the Color Space using Point Clouds
-from plot_utils import plot_utils
-x=plot_utils(img_data,title="Input color space: Over 16 million possible colors")
-x.colorSpace()
-
-# ### Task 4: Visualizing the K-means Reduced Color Space
-from sklearn.cluster import MiniBatchKMeans
-kmean=MiniBatchKMeans(20).fit(img_data)
-k_colors=kmean.cluster_centers_[kmean.predict(img_data)]
-y=plot_utils(img_data,colors=k_colors,title="reduced space")
-y.colorSpace()
-
-# ### Task 5: K-means Image Compression with Interactive Controls
+# ###  K-means Image Compression Python Function
 def color_compression(img,k):
     input_img=io.imread(img)
     img_data=(input_img/255.0).reshape(-1,3)
@@ -55,8 +34,8 @@ def color_compression(img,k):
     
     plt.subplots_adjust(top=0.9)
     plt.show()
-
-#img=input("Enter image location: ")
-#k=int(input("Enter of distinct numbers you want in compressed image;0<k<256: " ))
-
-#color_compression(img,k)
+    
+"""
+img=input("Enter image location: ")
+k=int(input("Enter of distinct numbers you want in compressed image;0<k<256: " ))
+color_compression(img,k) """
