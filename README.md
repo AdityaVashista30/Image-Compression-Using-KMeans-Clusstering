@@ -7,4 +7,4 @@ There are two types of image compression files here:
 
 2. Python File: Containg function to see and analyse original and compressed image with manually given k(number of colors in compressed image)
 
-Further more, plot_utils.py contains helping class used by above mentioned jupyter, which is used to visualize color space of the images.
+Further more, plot_utils.py contains helping class used by above mentioned jupyter notebook , which is used to visualize color space of the images.
