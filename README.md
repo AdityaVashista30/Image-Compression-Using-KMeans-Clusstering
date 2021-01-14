@@ -3,7 +3,7 @@ It is a simple image compression technique that reduces the number of colors in 
 
 There are two types of image compression files here:
 
-1. Jupyter Notebook: An interactive image compression system where you can select image to be compressed and and number of colors on image.
+1. Jupyter Notebook: An interactive image compression system where you can select image to be compressed and number of colors on image.
 
 2. Python File: Containg function to see and analyse original and compressed image with manually given k(number of colors in compressed image)
 
